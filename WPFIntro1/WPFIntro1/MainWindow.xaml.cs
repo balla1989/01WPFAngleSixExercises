@@ -22,7 +22,7 @@ namespace WPFIntro1
     {
         public MainWindow()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }

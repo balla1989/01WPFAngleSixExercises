@@ -24,11 +24,18 @@
 
             <!--TEXTBLOCK-->
 
-        <TextBlock Text="Pulse Proporties" FontWeight="Bold" Margin="0 10" />
+            <TextBlock Text="Pulse Proporties" FontWeight="Bold" Margin="0 10" />
         
-        <!--Description-->
-        <TextBlock Text="Description"   />
+            <!--Description-->
+            <TextBlock Text="Description"   />
+            <TextBox Padding="2"/>
         
+            <!--Status and Revision -->
+            <Grid>
+                
+                
+            </Grid>
+
 
 
         </StackPanel>
