@@ -6,19 +6,19 @@
         xmlns:local="clr-namespace:WPFBasicsYoutube"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="226.5">
+    <Border Padding="10">
     <StackPanel>
         <Grid >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
-
-
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content= "Apply"/>
+            <Button Margin="0 0 10 0 " Grid.Column="0" Content= "Apply"/>
             <Button Grid.Column="1" Content="Reset"/>
-            <Button Grid.Column="2" Content="Refresh"/>
+            <Button Margin="10 0 0 0 " Grid.Column="2" Content="Refresh"/>
         </Grid>
 
     </StackPanel>
+    </Border>
 </Window>
