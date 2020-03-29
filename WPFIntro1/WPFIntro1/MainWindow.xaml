@@ -32,8 +32,27 @@
         
             <!--Status and Revision -->
             <Grid>
-                
-                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>                 
+                </Grid.ColumnDefinitions>
+                <!--Status-->
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <TextBlock Text="Status"/>
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+
+                <!--Revision-->
+                <StackPanel Grid.Column="1" Margin="0 0 10 0">
+                    <TextBlock Text="Revision"/>
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+
+                <!--Part Number--><!--
+                <TextBlock Text="PartNumber"   />
+                <TextBox Padding="2"/>-->
+
+
             </Grid>
 
 
