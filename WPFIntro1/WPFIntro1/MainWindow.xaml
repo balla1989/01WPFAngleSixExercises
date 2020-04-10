@@ -69,6 +69,8 @@
 
             <!-- Work Centres-->
             <TextBlock  Text="Work Centres"   Margin="0 0" />
+        
+            <!--Check Boxes-->
 
             <Grid>
                 <Grid.ColumnDefinitions>
