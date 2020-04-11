@@ -25,6 +25,36 @@ namespace WPFIntro1
             //InitializeComponent();
         }
 
-        
+        private void ApplyButtonName_Click(object sender, RoutedEventArgs e)
+        {
+            //to access the button you can do this.//
+            MessageBox.Show($"The description is: { this.DescriptionText.Text}");
+        }
+
+        private void ResetButtonName_Click(object sender, RoutedEventArgs e)
+        {
+                this.WeldCheckBox.IsChecked =
+                this.AssemblyCheckBox.IsChecked =
+                this.PlasmaCheckBox.IsChecked =
+                this.LaserCheckBox.IsChecked =
+                this.PurchaseCheckBox.IsChecked =
+                this.LatheCheckBox.IsChecked =
+                this.DrillCheckBox.IsChecked =
+                this.FoldCheckBox.IsChecked =
+                this.RollCheckBox.IsChecked =
+                this.SawCheckBox.IsChecked = false;
+            this.LengthText.Text = null;
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            //this.LengthText.Text += ((CheckBox)sender).Content;
+            this.LengthText.Text += (String)((CheckBox)sender).Content+ " ";
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            this.LengthText.Text = LengthText.Text.Replace((String)((CheckBox)sender).Content,"");
+        }
     }
 }

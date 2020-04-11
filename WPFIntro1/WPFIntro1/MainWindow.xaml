@@ -3,14 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPFBasicsYoutube"
+        xmlns:local="clr-namespace:WPFIntro1"
         mc:Ignorable="d"
-        Title="Mechanical Parts" Height="975.333" Width="300">
+        Title="Mechanical Parts" Height="800" Width="300">
     <Border Padding="10">
         
         <!--lessons learned
             1 'Margin' gives outside buffer 'Padding' gives inside buffer
-            2 By default Stack Panel orientation is 'Vertical'-->
+            2 By default Stack Panel orientation is 'Vertical'
+            3 In order to acces the WPF Controls in code behind, they need to have "names"-->
+        
     <StackPanel >
             <!-- BUTTONS-->
             <Grid >
@@ -22,9 +24,9 @@
                 </Grid.ColumnDefinitions>
 
 
-                <Button x:Name="ApplyButton"  Margin="0 0 10 0 " Grid.Column="0" Content= "Apply" Height="20" VerticalAlignment="Top" Click="ApplyButton_Click" />
-                <Button x:Name="ResetButton" Grid.Column="1" Content="Reset"/>
-                <Button x:Name="RefreshButton" Margin="10 0 0 0 " Grid.Column="2" Content="Refresh"/>
+                <Button x:Name="ApplyButtonName"  Margin="0 0 10 0 " Grid.Column="0" Content= "Apply" Height="20" VerticalAlignment="Top"  Click="ApplyButtonName_Click"/>
+                <Button x:Name="ResetButtonName" Grid.Column="1" Content="Reset" Click="ResetButtonName_Click" />
+                <Button x:Name="RefreshButtonName" Margin="10 0 0 0 " Grid.Column="2" Content="Refresh"/>
                 
             </Grid>
 
@@ -34,7 +36,7 @@
         
             <!--Description-->
             <TextBlock Text="Description"/>
-            <TextBox Padding="2"/>
+            <TextBox x:Name="DescriptionText" Padding="2"/>
         
             <!--Status and Revision -->
             <Grid>
@@ -85,26 +87,26 @@
                 
                 <!--Column 1-->
                 <StackPanel Grid.Column="0" Margin="0 0 10 0">
-                    <CheckBox Content="Weld" />
-                    <CheckBox Content="Assebmly"/>
-                    <CheckBox Content="Plasma"/>
-                    <CheckBox Content="Laser"/>
-                    <CheckBox Content="Purchase"/>                 
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="WeldCheckBox" Content="Weld" />
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="AssemblyCheckBox" Content="Assebmly"/>
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="PlasmaCheckBox" Content="Plasma"/>
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="LaserCheckBox" Content="Laser"/>
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="PurchaseCheckBox" Content="Purchase"/>                 
                 </StackPanel>
 
                 <!--Column 2-->
                 <StackPanel Grid.Column="1" Margin="0 0 10 0">
-                    <CheckBox Content="Lathe" />
-                    <CheckBox Content="Drill"/>
-                    <CheckBox Content="Fold"/>
-                    <CheckBox Content="Roll"/>
-                    <CheckBox Content="Saw"/>
-                </StackPanel>
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="LatheCheckBox" Content="Lathe" />
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="DrillCheckBox" Content="Drill"/>
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="FoldCheckBox" Content="Fold"/>
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="RollCheckBox" Content="Roll"/>
+                    <CheckBox Unchecked="CheckBox_Unchecked" Checked="CheckBox_Checked" x:Name="SawCheckBox" Content="Saw"/>
+                </StackPanel> 
             </Grid>
 
             <!-- Length-->
             <TextBlock  Text="Length"   Margin="0 10 0 0" />            
-            <TextBox Padding="2"/>
+            <TextBox x:Name="LengthText" Padding="2"/>
 
             <!--Mass-->
             <TextBlock Text="Mass"   />
