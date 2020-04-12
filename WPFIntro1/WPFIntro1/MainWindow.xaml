@@ -4,7 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFIntro1"
-        mc:Ignorable="d"
+        mc:Ignorable="d"       
+        
+        Loaded="Window_Loaded"          
+        
+        
         Title="Mechanical Parts" Height="800" Width="300">
     <Border Padding="10">
         
@@ -110,13 +114,13 @@
 
             <!--Mass-->
             <TextBlock Text="Mass"   />
-            <TextBox Margin=" 0 2 0 10" IsReadOnly ="True" Background="#eee" Padding="2"/>
+            <TextBox x:Name="MassText" Margin=" 0 2 0 10" IsReadOnly ="True" Background="#eee" Padding="2"/>
 
             <!--Finish-->
             <TextBlock Text="Finish"   />
-            <ComboBox Margin=" 0 2 0 10" Padding="2" SelectedIndex="0">
-                <ComboBoxItem>Painted</ComboBoxItem>
-                <ComboBoxItem> Not Painted</ComboBoxItem>     
+            <ComboBox x:Name="FinishDropDown" SelectionChanged="FinishDropdown_SelectionChanged" Margin=" 0 2 0 10" Padding="2" SelectedIndex="0">
+                <ComboBoxItem Content="Painted"/>
+                <ComboBoxItem Content="Not Painted"/>
             </ComboBox>
 
             <!--Purchase Information-->
@@ -128,7 +132,7 @@
         
             <!-- Supplier Name-->
             <TextBlock  Text="Supplier Name"   Margin="0 10 0 0" />
-            <TextBox Padding="2"/>
+            <TextBox x:Name="SupplierNameText" DataContextChanged="SupplierNameText_DataContextChanged" Padding="2"/>
 
             <!-- Supplier Code-->
             <TextBlock  Text="Supplier Code"   Margin="0 10 0 0" />
@@ -139,7 +143,7 @@
 
             <!-- Note-->
             <TextBlock  Text="Note"   Margin="0 10 0 0" />
-            <TextBox Padding="2"/>
+            <TextBox x:Name="NoteText" Padding="2"/>
 
         </StackPanel>
     </Border>
